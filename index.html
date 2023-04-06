@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body class="light">
+    <!-- <div class="custom-alert" id="alert">
+        <h3 id="alertTitle">Info</h3>
+        <p id="alertMessage">Please select type.</p>
+    </div> -->
+    <div class="fixed-top-right">
+        <button type="button" class="theme-btn" id="theme-toggle">
+            <span class="material-symbols-outlined">
+                dark_mode
+            </span>
+            <span class="material-symbols-outlined" style="display: none;">
+                light_mode
+            </span>
+        </button>
+    </div>
+    <div class="container">
+        <div class="box-shadow">
+            <div class="box">
+                <h2>EMI Calculator</h2>
+                <div class="label-input-fields">
+                    <div class="grid-2-col">
+                        <label for="inAmount">Ammout (Rs.)</label>
+                        <input class="custom-input" type="number" id="inAmount" min="0" autofocus />
+                    </div>
+                    <div class="grid-2-col">
+                        <label for="inInterest">Interest (%)</label>
+                        <input class="custom-input" type="number" id="inInterest" min="0" />
+                    </div>
+                    <div class="grid-2-col">
+                        <label for="inLoanDuration">Loan Duration</label>
+                        <div style="display: grid; grid-template-columns: 35% auto; column-gap: 6px;">
+                            <input class="custom-input" type="number" id="inLoanDuration" min="0" />
+                            <div class="label-radio-btn">
+                                <input id="loanDurationMonth" type="radio" name="loanDuration" />
+                                <label for="loanDurationMonth">
+                                    Month
+                                </label>
+                                <input id="loanDurationYear" type="radio" name="loanDuration" />
+                                <label for="loanDurationYear">
+                                    Year
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <label for="inAmount">Ammout</label>
+                    <input class="custom-input" type="number" id="inAmount" /> -->
+                </div>
+                <div class="text-center">
+                    <button id="submitButton" class="btn-primary" type="button">Submit</button>
+                </div>
+            </div>
+
+            <div class="result-container">
+                <div class="grid-2-70-30">
+                    <span>Loan EMI</span>
+                    <span class="rs">
+                        Rs.
+                        <span id="emiAmount">--</span>
+                    </span>
+                </div>
+                <div class="grid-2-70-30">
+                    <span>Total interest paybale</span>
+                    <span class="rs">
+                        Rs.
+                        <span id="interestAmount">--</span>
+                    </span>
+                </div>
+                <hr />
+                <div class="grid-2-70-30">
+                    <span>Total Payment (Principal + Interest)</span>
+                    <span class="rs">
+                        Rs.
+                        <span id="totalAmount">--</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
